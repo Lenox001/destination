@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Journey Planner</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background: linear-gradient(135deg, #94d1c6 0%, #6577c5 100%);
+            color: #333;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+            max-width: 800px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            font-size: 3rem;
+            color: #8d7878;
+            font-weight: bold;
+        }
+        .header p {
+            color: #3f2f2f;
+        }
+        .trip-card {
+            background-color: #e0d9d9;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .trip-card h3 {
+            color: #4A90E2;
+            margin-bottom: 10px;
+        }
+        .add-destination-btn {
+            background-color: #4A90E2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 1rem;
+        }
+        .dream-input {
+            border: 2px solid #4A90E2;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .dream-input:focus {
+            border-color: #74ebd5;
+            box-shadow: 0 0 5px #74ebd5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><u>Dream Journey Planner</u></h1>
+            <p>Create your dream trip with magical destinations and fun activities!</p>
+        </div>
+        <!-- Add Destination Form -->
+        <div class="trip-card">
+            <h3>Add a Dream Destination</h3>
+            <input type="text" class="form-control dream-input" id="destinationInput" placeholder="Enter a dream destination">
+            <input type="text" class="form-control dream-input" id="activityInput" placeholder="Enter an exciting activity">
+            <button class="btn add-destination-btn mt-2" onclick="addDreamDestination()">Add to Journey</button>
+        </div>
+
+        <!-- Display Added Destinations -->
+        <div id="dreamJourney" class="trip-card">
+            <h3>Your Dream Journey</h3>
+            <ul id="journeyList" class="list-group"></ul>
+        </div>
+        <div id="retrievedList" class="trip-card">
+            <h3>Dream Destinations</h3>
+            <ul id="retrievedDestinations"></ul>
+        </div>
+        
+    </div>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
